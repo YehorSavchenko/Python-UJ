@@ -27,9 +27,13 @@ class Circle:
         return Circle(self.pt.x + x, self.pt.y + y, self.radius)
 
     def cover(self, other):
-        radius = math.sqrt(math.pow(self.pt.x - other.pt.x, 2) + math.pow(self.pt.y - other.pt.y, 2))
         x_center = (self.pt.x + other.pt.x) / 2
         y_center = (self.pt.y + other.pt.y) / 2
+
+        radius1 = math.sqrt(pow(x_center - self.pt.x, 2) + pow(y_center - self.pt.y, 2)) + self.radius
+        radius2 = math.sqrt(pow(x_center - other.pt.x, 2) + pow(y_center - other.pt.y, 2)) + other.radius
+        radius = max(radius1, radius2)
+
         return Circle(x_center, y_center, radius)
 
 
@@ -56,7 +60,8 @@ class TestCircle(unittest.TestCase):
         self.assertEqual(Circle(4, 5, 6).move(7, 8), Circle(11, 13, 6))
 
     def test_cover(self):
-        self.assertEqual(Circle(0, 0, 2).cover(Circle(0, 2, 2)), Circle(0, 1, 2))
+        self.assertEqual(Circle(0, 0, 2).cover(Circle(0, 2, 2)), Circle(0, 1, 3))
+        self.assertEqual(Circle(0, 0, 1).cover(Circle(0, 0, 2)), Circle(0, 0, 2))
 
     def tearDown(self): pass
 

@@ -1,8 +1,8 @@
 class Stack:
 
-    def __init__(self, size=10):
-        self.items = size * [None]  # utworzenie tablicy
-        self.n = 0  # liczba elementów na stosie
+    def __init__(self, size=5):
+        self.items = size * [None]
+        self.n = 0
         self.size = size
 
     def is_empty(self):
@@ -22,5 +22,5 @@ class Stack:
             raise IndexError('Stack is empty!')
         self.n -= 1
         data = self.items[self.n]
-        self.items[self.n] = None  # usuwam referencję
+        self.items[self.n] = None
         return data

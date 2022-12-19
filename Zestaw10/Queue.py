@@ -1,4 +1,3 @@
-import random
 from random import randint
 
 
@@ -8,11 +7,11 @@ class RandomQueue:
         self.n = 0
         self.items = []
 
-    def insert(self, item):  # wstawia element w czasie O(1)
+    def insert(self, item):
         self.items.append(item)
         self.n += 1
 
-    def remove(self):  # zwraca losowy element w czasie O(1)
+    def remove(self):
         if self.is_empty():
             raise IndexError('Queue is empty!')
         rand_index = randint(0, self.n - 1)

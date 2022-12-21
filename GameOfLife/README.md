@@ -1,5 +1,6 @@
 # Game of Life
-The `GameOfLife` class is a representation of the classic game **"Conway's Game of Life"** using the Tkinter library.
+ - The `GameOfLife` class is a representation of the classic game **"Conway's Game of Life"** using the Tkinter library.
+    
     The class has the following attributes:
     - `window`: A Tkinter window object that will be used to display the game. 
     - `canvas`: A Tkinter canvas object that will be used to display the cells of the game. 

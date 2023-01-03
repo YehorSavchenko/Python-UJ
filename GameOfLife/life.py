@@ -89,7 +89,7 @@ random.seed()
 screen_size = 600  # screen_size X screen_size
 board_size = 60  # screen size must be divisible by board size
 cell_size = screen_size / board_size  # Dimension of one cells
-cells = 3601  # number of "alive" cells at the beginning
+cells = 600  # number of "alive" cells at the beginning
               # Should be less than board_size^2 or ValueError("Sample larger than population or is negative")
               # Default Conwaya (23/3)
 

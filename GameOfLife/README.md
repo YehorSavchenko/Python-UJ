@@ -10,7 +10,8 @@ Each element in the array is a boolean that is True if the cell is "alive" and F
 
     The class has the following methods:
 
-    - `__init__(self)`: The constructor for the class. It initializes the window, canvas, and cells_array attributes, and calls the create_board_array and screen_update methods. 
+    - `__init__(self)`: The constructor for the class. It Initializes the game by creating a window and canvas with tkinter, creating the board array, creating the cells array, and calling the screen_update method in a loop. 
+    - `play(self)`: Sets the window title, size, and resizability, creates the Tkinter canvas and sets its properties, initializes the board_array attribute as a 2D array of all False values, fills the board_array with a random selection of "alive" cells, initializes the cells_array attribute as a 2D array of Tkinter rectangle objects representing the cells on the canvas, updates the screen to show the initial state of the board, and starts the Tkinter event loop.
     - `create_board_array(self)`: This method initializes the board_array attribute by randomly selecting a specified number of cells to be "alive."
     - `screen_update(self)`: This method updates the colors of the cells on the canvas based on their status in the board_array. It also updates the board_array by applying the rules of the game to each cell. 
     - `sum_nearest_neighbors(self, x, y)`: This method calculates the number of "alive" cells that are adjacent to the cell at the given x and y indices in the board_array.

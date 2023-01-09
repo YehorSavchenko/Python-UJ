@@ -32,7 +32,7 @@ class GameOfLife:
         # Firstly amount of "alive" neighbors that the cell doesn't die
         # Secondly the number of "alive" neighbors that the dead cell comes
         # to life You can take more patterns here:
-        # https://pl.wikipedia.org/wiki/Gra_w_%C5%BCycie#Modyfikacje_gry_w_%C5%BCycie
+# https://pl.wikipedia.org/wiki/Gra_w_%C5%BCycie#Modyfikacje_gry_w_%C5%BCycie
 
         # Stay pattern -> how much you need to be around to survive
         self.stay = [int(x) for x in
@@ -115,7 +115,8 @@ class GameOfLife:
 
     def screen_update(self):
         """
-        Method to update the screen based on the current state of the board_array
+        Method to update the screen based on the current state of the
+        board_array
         :return:
         """
 
